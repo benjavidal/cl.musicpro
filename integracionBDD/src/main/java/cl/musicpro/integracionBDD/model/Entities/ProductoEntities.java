@@ -37,7 +37,7 @@ public class ProductoEntities {
 
     @Basic
     @Column(name = "descripcion")
-    private String description;
+    private String descripcion;
 
     @Basic
     @Column(name = "sku")

@@ -12,12 +12,14 @@ public class CategoriaService {
     @Autowired
     CategoriaRepository categoriaRepository;
 
-    public CategoriaDTO getCategoryById (int idcategoria){
-        CategoriaEntities  categoria = CategoriaEntities.getIdcategoria(idcategoria)
+    public CategoriaDTO getCategoriaById (int idcategoria){
+        CategoriaEntities  categoria = categoriaRepository.getReferenceById(idcategoria);
 
         CategoriaDTO categoriaDTO = new CategoriaDTO();
         categoriaDTO.setIdcategoria(categoria.getIdcategoria());
         categoriaDTO.setNombre(categoria.getNombre());
+
+        return categoriaDTO;
 
     }
     

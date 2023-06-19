@@ -10,7 +10,7 @@ import cl.musicpro.integracionBFF.model.DTO.CommonResponseDTO;
 import cl.musicpro.integracionBFF.services.ProductoService;
 
 @RestController
-@RequestMapping("/productos-bff")
+@RequestMapping("/producto-bff")
 public class ProductoController {
 
     @Autowired
