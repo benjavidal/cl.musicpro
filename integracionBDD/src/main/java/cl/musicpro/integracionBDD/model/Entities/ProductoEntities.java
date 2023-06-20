@@ -51,9 +51,6 @@ public class ProductoEntities {
     @Column(name = "idcategoria")
     private int idcategoria;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "idcategoria", referencedColumnName = "idcategoria", insertable =false, updatable = false)
-    @JsonBackReference 
-    private Category fk_productos_categoria;
+
     
 }

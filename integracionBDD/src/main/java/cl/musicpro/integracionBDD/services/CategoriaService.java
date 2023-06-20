@@ -12,8 +12,8 @@ public class CategoriaService {
     @Autowired
     CategoriaRepository categoriaRepository;
 
-    public CategoriaDTO getCategoriaById (int idcategoria){
-        CategoriaEntities  categoria = categoriaRepository.getReferenceById(idcategoria);
+    public CategoriaDTO getCategoriaById (int idCategoria){
+        CategoriaEntities  categoria = categoriaRepository.getReferenceById(idCategoria);
 
         CategoriaDTO categoriaDTO = new CategoriaDTO();
         categoriaDTO.setIdcategoria(categoria.getIdcategoria());

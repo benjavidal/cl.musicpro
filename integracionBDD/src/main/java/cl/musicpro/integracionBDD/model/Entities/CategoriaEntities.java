@@ -20,7 +20,7 @@ import lombok.Data;
 @Data
 @Entity
 
-@Table(schema = "cl.musicpro", name= "categoria")
+@Table(schema = "cl.musicpro", name= "categorias")
 
 public class CategoriaEntities {
     @Id
@@ -31,8 +31,5 @@ public class CategoriaEntities {
     @Column (name ="nombre")
     private String nombre;
 
-    @OneToMany(mappedBy = "fk_productos_categoria", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @Column(nullable = true)
-    @JsonManagedReference
-    private Collection<ProductoEntities> productByidcategoria;
+  
 }

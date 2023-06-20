@@ -40,7 +40,7 @@ public class ProductoService {
             productoDTO.setPrecio(productoDTO.getPrecio());
             productoDTO.setSku(productoDTO.getSku());
 
-            productoDTO.setCategoria(categoryService.getCategoriaById()));
+            productoDTO.setCategoria(categoryService.getCategoriaById(producto.getIdcategoria()));
 
             listaProducto.add(productoDTO);
 
@@ -61,8 +61,9 @@ public class ProductoService {
         producto.setModelo(productoDTO.getModelo());
         producto.setPrecio(productoDTO.getPrecio());
        producto.setSku(productoDTO.getSku());
+       producto.setIdcategoria(productoDTO.getCategoria().getIdcategoria());
 
-        ProductoRepository newProduct = productoRepository.save(productoRepository);
+        ProductoEntities newProduct = productoRepository.save(producto);
 
         CommonResponseDTO commonResponseDTO = new CommonResponseDTO();
         commonResponseDTO.setResponseCode("200");
